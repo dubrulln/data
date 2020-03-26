@@ -8,9 +8,10 @@ from os.path import isfile, join
 
 
 INPUT_DIR = Path("./dist")
-FILE_PATH = join(INPUT_DIR, "chiffres-cles.json")
+INPUT_FILE_PATH = join(INPUT_DIR, "chiffres-cles.json")
+OUTPUT_FILE_PATH = join(INPUT_DIR, "chiffres-cles-filtered.json")
 
-with open(FILE_PATH, 'r', encoding='utf8') as infile:
+with open(INPUT_FILE_PATH, 'r', encoding='utf8') as infile:
     all_data = json.load(infile)
 
 new_data = []
@@ -21,12 +22,11 @@ for entry in all_data:
     date = datetime.datetime.strptime(entry['date'], '%Y-%m-%d').date()
     if delta <= date:
         # print (date)
-        if entry['source']:
+        if 'source' in entry:
             del entry['source']
         new_data.append(entry)
 
 
-# TODO should override FILE_PATH
 # print (new_data)
-with open("test.json", 'w', encoding='utf8') as outfile:
+with open(OUTPUT_FILE_PATH, 'w', encoding='utf8') as outfile:
     json.dump(new_data, outfile, ensure_ascii=False)
