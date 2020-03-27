@@ -8,8 +8,8 @@ from os.path import isfile, join
 
 
 INPUT_DIR = Path("./dist")
-INPUT_FILE_PATH = join(INPUT_DIR, "chiffres-cles.json")
-OUTPUT_FILE_PATH = join(INPUT_DIR, "chiffres-cles-filtered.json")
+INPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles.json")
+OUTPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles-filtered.json")
 
 with open(INPUT_FILE_PATH, 'r', encoding='utf8') as infile:
     all_data = json.load(infile)
