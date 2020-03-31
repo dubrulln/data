@@ -28,5 +28,6 @@ for entry in all_data:
 
 
 # print (new_data)
+print (OUTPUT_FILE_PATH)
 with open(OUTPUT_FILE_PATH, 'w', encoding='utf8') as outfile:
     json.dump(new_data, outfile, ensure_ascii=False)
