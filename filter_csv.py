@@ -24,6 +24,8 @@ for entry in all_data:
         # print (date)
         if 'source' in entry:
             del entry['source']
+        if 'sourceType' in entry:
+            del entry['sourceType']
         new_data.append(entry)
 
 
