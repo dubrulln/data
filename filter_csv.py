@@ -20,13 +20,15 @@ delta = today - datetime.timedelta(days=30)
 
 for entry in all_data:
     date = datetime.datetime.strptime(entry['date'], '%Y-%m-%d').date()
-    if delta <= date:
-        # print (date)
-        if 'source' in entry:
-            del entry['source']
-        if 'sourceType' in entry:
-            del entry['sourceType']
-        new_data.append(entry)
+    if delta > date:
+        continue
+
+    # print (date)
+    if 'source' in entry:
+        del entry['source']
+    if 'sourceType' in entry:
+        del entry['sourceType']
+    new_data.append(entry)
 
 
 # print (new_data)
