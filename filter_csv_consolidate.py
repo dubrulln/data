@@ -11,13 +11,14 @@ from operator import itemgetter
 INPUT_DIR = Path("./dist")
 INPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles.json")
 OUTPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles-filtered-consolidated.json")
+DAYS_ROLLING = 30
 
 with open(INPUT_FILE_PATH, 'r', encoding='utf8') as infile:
     all_data = json.load(infile)
 
 new_data = []
 today = datetime.date.today()
-delta = today - datetime.timedelta(days=30)
+delta = today - datetime.timedelta(days=DAYS_ROLLING)
 
 new_dict = {}
 for entry in all_data:
