@@ -1,0 +1,48 @@
+{
+    "dates": {
+        "D1": {                                    "enddate": "2020-05-10 23:59:59", "friendly": "Avant le 11 mai"},
+        "D2": {"startdate": "2020-05-11 00:00:00", "enddate": "2020-06-01 23:59:59", "friendly": "Du 11 mai au 1er juin"},
+        "D3": {"startdate": "2020-06-02 00:00:00",                                   "friendly": "Perpectives après le 2 juin"}
+    },
+    "categories" : [
+        { "ActivitesSociales" : { "friendly" : "Vie sociale et activités", "activites": [
+            {"AS1":  { "friendly": "Cinémas et theâtres",                              "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS2":  { "friendly": "Médiathèques, bibliothèques et petits musées",     "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" }, "D3": "YES"} },
+            {"AS3":  { "friendly": "Grands musées",                                    "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS4":  { "friendly": "Forêts",                                           "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" }, "D3": "YES"} },
+            {"AS5":  { "friendly": "Parcs et jardins",                                 "D1": "NO",                           "D2": { "faible": "YES", "élevé": "NO"  }, "D3": "UNKNOWN|Ouverture en fonction de la circulation de l'épidémie dans le département"} },
+            {"AS6":  { "friendly": "Plages et lacs",                                   "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS7":  { "friendly": "Sales de sport, salles des fêtes et polyvalentes", "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS8":  { "friendly": "Colonies de vacances, camps, etc.",                "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS9":  { "friendly": "Mariages et cérémonies",                           "D1": "NO|Reportés (sauf urgence)",   "D2": { "faible": "D1",  "élevé": "D1"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS10": { "friendly": "Lieux de cultes",                                  "D1": "NO|Sans cérémonie",            "D2": { "faible": "D1",  "élevé": "D1"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS11": { "friendly": "Cérémonies funéraires",                            "D1": "NO|Moins de 20 personnes",     "D2": { "faible": "D1",  "élevé": "D1"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS12": { "friendly": "Cimetières",                                       "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" }, "D3": "YES"} },
+            {"AS13": { "friendly": "Rassemblements de plus de 1000 personnes",         "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS14": { "friendly": "Événements de plus de 5000 personnes",             "D1": "NO|Interdit jusqu'au 31 août", "D2": { "faible": "D1",  "élevé": "D1"  }, "D3": "D1"} }
+        ]}},
+        { "Deplacements" : { "friendly" : "Déplacements", "activites" : [
+            {"DEP1":  { "friendly": "Dans l'espace public",                          "D1": "NO|Sauf dérogation", "D2": { "faible": "YES",  "élevé": "YES"  }, "D3": "YES"} },
+            {"DEP2":  { "friendly": "En transport en commun (masques obligatoires)", "D1": "NO|Sauf dérogation", "D2": { "both": "YES|Respect des gestes barrières et des mesures de distanciation" }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"DEP3":  { "friendly": "Longue distance (> 100 km)",                    "D1": "NO|Sauf dérogation", "D2": { "both": "NO|Limités aux motifs impérieux familiaux et professionnels (Attestation)" }, "D3": "UNKNOWN|à définir fin mai"} }
+
+        ]}},
+        { "Commerces" : { "friendly" : "Commerces", "activites" : [
+            {"COM1":  { "friendly": "Commerces et centres commerciaux < 40000m²",  "D1": "NO|Uniquement de première nécessité",            "D2": { "both": "YES|Respect des règles sanitaires et organisationnelles (Masque recommandé)" }, "D3": "YES"} },
+            {"COM2":  { "friendly": "Marchés en plein air",                        "D1": "NO|Possibilité d'ouverture à la main du Préfet", "D2": { "both": "YES|Respect des règles sanitaires et organisationnelles. Possibilité de fermeture par le Préfet" }, "D3": "YES"} },
+            {"COM3":  { "friendly": "Centres commerciaux > 40000m²",               "D1": "NO",                                             "D2": { "both": "NO|Fermeture par le Préfet en cas de zone de chalandise éloignée" },            "D3": "UNKNOWN|à définir fin mai"} },
+            {"COM4":  { "friendly": "Coiffeurs, instituts de beauté, etc.",        "D1": "NO",                                             "D2": { "both": "YES|Sous réserve du respect des guides sanitaires" },                           "D3": "YES"} },
+            {"COM5":  { "friendly": "Bars, cafés, restaurants",                    "D1": "NO",                                             "D2": { "both": "NO"  },                                                                         "D3": "UNKNOWN|à définir fin mai"} }
+
+        ]}},
+        { "Ecoles" : { "friendly" : "Écoles et crèches", "activites" : [
+
+        ]}},
+        { "Transports" : { "friendly" : "Transports", "activites" : [
+
+        ]}},
+        { "Sports" : { "friendly" : "Sports", "activites" : [
+
+        ]}}
+    ]
+}   
