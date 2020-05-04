@@ -6,7 +6,7 @@
     },
     "categories" : [
         { "ActivitesSociales" : { "friendly" : "Vie sociale et activités", "activites": [
-            {"AS1":  { "friendly": "Cinémas et theâtres",                              "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
+            {"AS1":  { "friendly": "Cinémas et théâtres",                              "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
             {"AS2":  { "friendly": "Médiathèques, bibliothèques et petits musées",     "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" }, "D3": "YES"} },
             {"AS3":  { "friendly": "Grands musées",                                    "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  }, "D3": "UNKNOWN|à définir fin mai"} },
             {"AS4":  { "friendly": "Forêts",                                           "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" }, "D3": "YES"} },
@@ -36,6 +36,11 @@
 
         ]}},
         { "Ecoles" : { "friendly" : "Écoles et crèches", "activites" : [
+            {"EC1":  { "friendly": "Crèches",       "D1": "NO|Accueil des enfants de personnels prioritaires (10 enfants max.)", "D2": { "both": "YES|Réouverture dans la limite de groupe de 10 enfants (masques obligatoires pour les personnels)" }, "D3": "YES"} },
+            {"EC2":  { "friendly": "Maternelles",   "D1": "NO",     "D2": { "both": "YES|Ouverture, limite de 15 élèves par classe" }, "D3": "YES"} },
+            {"EC3":  { "friendly": "Élémentaires",  "D1": "NO",     "D2": { "both": "YES|Ouverture, limite de 15 élèves par classe" }, "D3": "YES"} },
+            {"EC4":  { "friendly": "Collèges",      "D1": "NO",     "D2": { "faible": "YES|En commençant par 6è et 5è. , Limite de 15 élèves par classe (masques obligatoires)",  "élevé": "NO"  }, "D3": "UNKNOWN|Ouverture en fonction de la circulation de l'épidémie dans le département"} },
+            {"EC5":  { "friendly": "Lycées",        "D1": "NO",     "D2": { "both": "NO" }, "D3": "UNKNOWN|Décision fin mai sur l'ouverture début juin."} }
 
         ]}},
         { "Transports" : { "friendly" : "Transports", "activites" : [
