@@ -44,10 +44,16 @@
 
         ]}},
         { "Transports" : { "friendly" : "Transports", "activites" : [
-
+            {"TR1":  { "friendly": "Transports en commun urbains", "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "YES|Offre maximale: en heure de pointe, réservés aux déplacements domicile-travail, scolaires et rendez-vous médicaux" }, "D3": "YES"} },
+            {"TR2":  { "friendly": "Transports inter-régionaux",   "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "NO|Offre réduite: réservés au motifs impérieux professionnels et familiaux (port du masque obligatoire)" },               "D3": "UNKNOWN|à définir fin mai"} },
+            {"TR3":  { "friendly": "Avions",                       "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "NO|Offre réduite: réservés au motifs impérieux professionnels et familiaux (port du masque obligatoire)" },               "D3": "UNKNOWN|à définir fin mai"} },
+            {"TR4":  { "friendly": "Taxis / VTC",                  "D1": "NO|Uniquement pour les déplacements autorisés",                 "D2": { "both": "YES|Limitation du nombre de passagers (port du masque obligatoire en l'absence de protection chauffeur/passager)" },      "D3": "YES"} }
         ]}},
         { "Sports" : { "friendly" : "Sports", "activites" : [
-
+            {"SP1":  { "friendly": "Sport individuel à l'extérieur",   "D1": "NO|Sauf activité physique à moins de 1km, pendant moins d'1h",     "D2": { "both": "YES|Autorisé sous réserve de respecter les règles de distanciation sociale" }, "D3": "YES|Autorisé sous réserve de respecter les règles de distanciation sociale"} },
+            {"SP2":  { "friendly": "Sport individuel à l'intérieur",   "D1": "NO",     "D2": { "both": "NO" },                                 "D3": "UNKNOWN|à définir fin mai"} },
+            {"SP3":  { "friendly": "Sports collectifs et de contact",  "D1": "NO",     "D2": { "both": "NO|Liste établie par le ministère" },  "D3": "UNKNOWN|à définir fin mai"} },
+            {"SP4":  { "friendly": "Sports collectifs professionnels", "D1": "NO",     "D2": { "both": "NO|Fin de saison 2019/2020" },         "D3": "NO|Fin de saison 2019/2020"} }
         ]}}
     ]
 }   
