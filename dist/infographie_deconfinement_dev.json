@@ -1,0 +1,59 @@
+{
+    "dates": {
+        "D1": {                                    "enddate": "2020-06-01 23:59:59", "friendly": "Avant le 2 juin"},
+        "D2": {"startdate": "2020-06-02 00:00:00", "enddate": "2020-06-21 23:59:59", "friendly": "Du 2 au 22 juin"},
+        "D3": {"startdate": "2020-06-22 00:00:00",                                   "friendly": "Perpectives après le 22 juin"}
+    },
+    "categories" : [
+        { "ActivitesSociales" : { "friendly" : "Vie sociale et activités", "activites": [
+            {"AS1":  { "friendly": "Cinémas et théâtres",                              "D1": "NO",                           "D2": { "both": "NO|théâtres autorisés dans les départements à circulation épidémique faible et masque obligatoire"  }, "D3": "YES"} },
+            {"AS2":  { "friendly": "Médiathèques, bibliothèques et petits musées",     "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" },     "D3": "YES"} },
+            {"AS3":  { "friendly": "Grands musées",                                    "D1": "NO",                           "D2": { "both": "YES|Masques obligatoires"  }, "D3": "YES"} },
+            {"AS4":  { "friendly": "Forêts",                                           "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" },     "D3": "YES"} },
+            {"AS5":  { "friendly": "Parcs et jardins",                                 "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" },     "D3": "YES"} },
+            {"AS6":  { "friendly": "Plages et lacs",                                   "D1": "NO",                           "D2": { "faible": "YES"  },                    "D3": "YES"} },
+            {"AS7":  { "friendly": "Salles de sport, salles des fêtes et polyvalentes","D1": "NO",                           "D2": { "faible": "YES|Masques obligatoires",  "élevé": "NO"  }, "D3": "YES"} },
+            {"AS8":  { "friendly": "Colonies de vacances, camps, etc.",                "D1": "NO",                           "D2": { "faible": "NO",  "élevé": "NO"  },     "D3": "YES"} },
+            {"AS9":  { "friendly": "Mariages et cérémonies",                           "D1": "NO|Reportés (sauf urgence)",   "D2": { "both": "YES|Cérémonies de mariage autorisés" },                   "D3": "YES"} },
+            {"AS10": { "friendly": "Lieux de cultes",                                  "D1": "NO|Sans cérémonie",            "D2": { "both": "YES" },                       "D3": "YES"} },
+            {"AS11": { "friendly": "Cérémonies funéraires",                            "D1": "NO|Moins de 20 personnes",     "D2": { "both": "YES" },                       "D3": "YES"} },
+            {"AS12": { "friendly": "Cimetières",                                       "D1": "NO",                           "D2": { "faible": "YES", "élevé": "YES" },     "D3": "YES"} },
+            {"AS13": { "friendly": "Rassemblements de plus de 1000 personnes",         "D1": "NO|Interdit jusqu'au 31 août", "D2": { "faible": "D1",  "élevé": "D1"  },     "D3": "D1"} },
+            {"AS14": { "friendly": "Événements de plus de 5000 personnes",             "D1": "NO|Interdit jusqu'au 31 août", "D2": { "faible": "D1",  "élevé": "D1"  },     "D3": "D1"} }
+        ]}},
+        { "Deplacements" : { "friendly" : "Déplacements", "activites" : [
+            {"DEP1":  { "friendly": "Dans l'espace public",                          "D1": "NO|Sauf dérogation", "D2": { "faible": "YES",  "élevé": "YES"  }, "D3": "YES"} },
+            {"DEP2":  { "friendly": "En transport en commun (masques obligatoires)", "D1": "NO|Sauf dérogation", "D2": { "both": "YES|Masque obligatoire" }, "D3": "YES"} },
+            {"DEP3":  { "friendly": "Longue distance (> 100 km)",                    "D1": "NO|Sauf dérogation", "D2": { "both": "YES" }, "D3": "YES"} }
+
+        ]}},
+        { "Commerces" : { "friendly" : "Commerces", "activites" : [
+            {"COM1":  { "friendly": "Commerces et centres commerciaux < 40000m²",  "D1": "NO",  "D2": { "both": "YES|Masque recommandé pour le personnel et les clients" }, "D3": "YES"} },
+            {"COM2":  { "friendly": "Marchés en plein air",                        "D1": "NO",  "D2": { "both": "YES|Possibilité de fermeture par le Préfet" },             "D3": "YES"} },
+            {"COM3":  { "friendly": "Centres commerciaux > 40000m²",               "D1": "NO",  "D2": { "faible": "YES|Masque recommandé pour le personnel et les clients",  "élevé": "NO|Fermeture possible" },            "D3": "UNKNOWN|à déterminer"} },
+            {"COM4":  { "friendly": "Coiffeurs, instituts de beauté, etc.",        "D1": "NO",  "D2": { "both": "YES|Sous réserve du respect des guides sanitaires" },       "D3": "YES"} },
+            {"COM5":  { "friendly": "Bars, cafés, restaurants",                    "D1": "NO",  "D2": { "faible": "YES|Places assises uniquement; 1 mètre entre chaque table",  "élevé": "YES|Terasses et espaces ouverts uniquement"  },  "D3": "YES"} }
+
+        ]}},
+        { "Ecoles" : { "friendly" : "Écoles et crèches", "activites" : [
+            {"EC1":  { "friendly": "Crèches",       "D1": "NO",     "D2": { "both": "YES|Masques obligatoires. Groupes de 10 enfants maximum" }, "D3": "YES"} },
+            {"EC2":  { "friendly": "Maternelles",   "D1": "NO",     "D2": { "both": "YES|Limite de 10 enfants par classe; Volontariat; Masque pour le personnel en cas de symptômes" }, "D3": "YES"} },
+            {"EC3":  { "friendly": "Élémentaires",  "D1": "NO",     "D2": { "both": "YES|Limite de 15 élèves par classe; Volontariat; Masque pour le personnel et les enfants en cas de symptômes" }, "D3": "YES"} },
+            {"EC4":  { "friendly": "Collèges",      "D1": "NO",     "D2": { "faible": "YES|Limite de 15 élèves par classe (masques obligatoires)",  "élevé": "6è et 5è. , Limite de 15 élèves par classe (masques obligatoires)"  }, "D3": "YES"} },
+            {"EC5":  { "friendly": "Lycées",        "D1": "NO",     "D2": { "both": "YES|Masques obligatoires" }, "D3": "YES"} }
+
+        ]}},
+        { "Transports" : { "friendly" : "Transports", "activites" : [
+            {"TR1":  { "friendly": "Transports en commun urbains", "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "YES|Masques obligatoires. En heure de pointe, réservés aux déplacements domicile-travail, scolaires et rendez-vous médicaux" }, "D3": "YES"} },
+            {"TR2":  { "friendly": "Transports inter-régionaux",   "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "YES|Masques obligatoires" },               "D3": "YES"} },
+            {"TR3":  { "friendly": "Avions",                       "D1": "NO|Offre réduite. Uniquement pour les déplacements autorisés",  "D2": { "both": "YES|Masques obligatoires" },               "D3": "YES"} },
+            {"TR4":  { "friendly": "Taxis / VTC",                  "D1": "NO|Uniquement pour les déplacements autorisés",                 "D2": { "both": "YES|Masques obligatoires pour les passagers. Limitation du nombre de passagers." },      "D3": "YES"} }
+        ]}},
+        { "Sports" : { "friendly" : "Sports", "activites" : [
+            {"SP1":  { "friendly": "Sport individuel à l'extérieur",   "D1": "NO",     "D2": { "both": "YES" }, "D3": "YES"} },
+            {"SP2":  { "friendly": "Sport individuel à l'intérieur",   "D1": "NO",     "D2": { "both": "YES" },                                "D3": "YES"} },
+            {"SP3":  { "friendly": "Sports collectifs et de contact",  "D1": "NO",     "D2": { "both": "NO|Liste établie par le ministère" },  "D3": "UNKNOWN|à déterminer"} },
+            {"SP4":  { "friendly": "Sports collectifs professionnels", "D1": "NO",     "D2": { "both": "YES|Reprise des entraînements" },      "D3": "UNKNOWN|à déterminer"} }
+        ]}}
+    ]
+}   
