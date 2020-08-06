@@ -1,7 +1,6 @@
-date: 2020-08-01
+date: 2020-08-04
 source:
   nom: Ministère des Solidarités et de la Santé
   # Airtable complété par la DGS
 donneesNationales:
-  casConfirmes: 189547
-  casConfirmesEhpad: 39638
+
