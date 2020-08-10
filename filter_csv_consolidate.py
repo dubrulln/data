@@ -46,7 +46,7 @@ for entry in all_data:
                     new_dict[key_][type_of_entry] = v[type_of_entry]
                     break
 
-    # print (date)
+    print (date)
 
 
 # for k, v in new_dict.items():
