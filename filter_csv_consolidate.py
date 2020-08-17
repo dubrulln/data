@@ -30,13 +30,14 @@ for entry in all_data:
         new_dict[key_] = {}
 
     for type_of_entry in ['casConfirmes', 'deces', 'hospitalises', 'reanimation', 'gueris']:
+        # update data for the current date
         if type_of_entry in entry and entry[type_of_entry]:
             if type_of_entry not in new_dict[key_]:
                 new_dict[key_][type_of_entry] = entry[type_of_entry]
             elif entry[type_of_entry] > new_dict[key_][type_of_entry]:
                 new_dict[key_][type_of_entry] = entry[type_of_entry]
 
-                
+        # if data nor present for the current date, search it in history
         if type_of_entry not in new_dict[key_]:
             for k in sorted(new_dict.keys(), key=itemgetter(0,1,2), reverse=True):
                 code = k[1]
