@@ -9,3 +9,5 @@ donneesNationales:
   hospitalises: 4530
   reanimation: 400
   casConfirmesEhpad: 40083
+  nouvellesHospitalisations: 135
+  nouvellesReanimations: 28
