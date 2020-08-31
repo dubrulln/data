@@ -66,6 +66,7 @@ for k in sorted(new_dict.keys(), key=itemgetter(0,1,2)):
         continue
 
     values = {
+        # 'date': (date - datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
         'date': date.strftime("%Y-%m-%d"),
         'code': code,
         'nom': nom,
