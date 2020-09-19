@@ -1,6 +1,8 @@
+import os
 import csv
 import json
 import datetime
+import pickle
 from pathlib import Path
 # import requests
 from os import listdir
@@ -12,6 +14,13 @@ INPUT_DIR = Path("./dist")
 INPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles.json")
 OUTPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles-filtered-consolidated.json")
 DAYS_ROLLING = 30
+DATASET_NAME = "history_cache.pickle"
+
+history_cache = {}
+if os.path.exists(DATASET_NAME):
+    fd = open(DATASET_NAME, 'rb')
+    history_cache = pickle.load(fd)
+    fd.close()
 
 with open(INPUT_FILE_PATH, 'r', encoding='utf8') as infile:
     all_data = json.load(infile)
@@ -20,10 +29,17 @@ today = datetime.date.today()
 delta = today - datetime.timedelta(days=DAYS_ROLLING)
 
 new_dict = {}
+
+if 'data' in history_cache:
+    new_dict = history_cache['data']
+
 for entry in all_data:
     date = datetime.datetime.strptime(entry['date'], '%Y-%m-%d').date()
     # if delta > date: # mustn't be use here since we use history to fill missing values
     #     continue
+
+    if 'date' in history_cache and history_cache['date'] >= date:
+        continue
 
     key_ = (date, entry['code'], entry['nom'])
     if key_ not in new_dict:
@@ -48,7 +64,13 @@ for entry in all_data:
                     break
 
     print (date)
+    print (len(new_dict))
 
+history_cache['date'] = today
+history_cache['data'] = new_dict
+fw = open(DATASET_NAME, 'wb')
+pickle.dump(history_cache, fw)
+fw.close()
 
 # for k, v in new_dict.items():
 #     print (k, v)
