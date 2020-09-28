@@ -38,7 +38,7 @@ for entry in all_data:
     # if delta > date: # mustn't be use here since we use history to fill missing values
     #     continue
 
-    if 'date' in history_cache and history_cache['date'] >= date:
+    if 'date' in history_cache and history_cache['date'] > date:
         continue
 
     key_ = (date, entry['code'], entry['nom'])
