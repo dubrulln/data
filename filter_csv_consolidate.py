@@ -34,7 +34,7 @@ if 'data' in history_cache:
     new_dict = history_cache['data']
 
 for entry in all_data:
-    date = datetime.datetime.strptime(entry['date'], '%Y-%m-%d').date()
+    date = datetime.datetime.strptime(entry['date'].replace('_', '-'), '%Y-%m-%d').date()
     # if delta > date: # mustn't be use here since we use history to fill missing values
     #     continue
 
