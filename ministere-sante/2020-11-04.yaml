@@ -8,5 +8,7 @@ donneesNationales:
   decesEhpad: 12079
   hospitalises: 27534
   reanimation: 4089
+  gueris: 122662
+  casConfirmesEhpad: 73958
   nouvellesHospitalisations: 3681
   nouvellesReanimations: 540
