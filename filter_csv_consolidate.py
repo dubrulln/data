@@ -16,6 +16,8 @@ OUTPUT_FILE_PATH = join(str(INPUT_DIR), "chiffres-cles-filtered-consolidated.jso
 DAYS_ROLLING = 30
 DATASET_NAME = "history_cache.pickle"
 
+print (">>> Start building " + OUTPUT_FILE_PATH)
+
 history_cache = {}
 if os.path.exists(DATASET_NAME):
     fd = open(DATASET_NAME, 'rb')
@@ -98,6 +100,6 @@ for k in sorted(new_dict.keys(), key=itemgetter(0,1,2)):
     new_data.append(values)
 
 # print (new_data)
-print (OUTPUT_FILE_PATH)
+print ("<<< End building " + OUTPUT_FILE_PATH)
 with open(OUTPUT_FILE_PATH, 'w', encoding='utf8') as outfile:
     json.dump(new_data, outfile, ensure_ascii=False)
